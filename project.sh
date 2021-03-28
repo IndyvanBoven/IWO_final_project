@@ -1,9 +1,7 @@
 #!/bin/bash
 #Indy van Boven
 
-
-
-path=drenthe_py.py
+path=final_project.py
 FILE=$1
 FILE2=$2
 
