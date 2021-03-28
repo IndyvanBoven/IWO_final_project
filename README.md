@@ -8,6 +8,14 @@ For the dependent variable erwtensoep in for December 2015. The same command is 
 
 zless /net/corpora/twitter2/Tweets/2015/12/201512*.out.gz | /net/corpora/twitter2/tools/tweet2tab user.location text | grep -wi 'erwtensoep'  | grep -vi ‘snert’ > ~/IWO_project/erwtensoep_2015_12.txt 
 
+# Copy to local
+With openingen linux in the directory where the text files should be stored:
+For every month with variable snert:
+scp s4340280@karora.let.rug.nl:~/IWO_project/snert_2015_12.txt /mnt/c/Users/indyv/Documents/IWO_project
+
+For every month with variable erwtensoep:
+scp s4340280@karora.let.rug.nl:~/IWO_project/erwtensoep_2015_12.txt /mnt/c/Users/indyv/Documents/IWO_project
+
 # Independent variables north and south
 Lists copied from Wikipedia and combined to make a list for all the places in the northern region. Combining them becomes north.txt
 
