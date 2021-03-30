@@ -49,8 +49,9 @@ def specific_cases(split_line):
     add_punct = re.sub('noord\toost', 'noord-oost', comma_tabs)                 #Adds -, noord oost becomes noord-oost
     add_punct_east = re.sub(r'([a-z])\toost^-', r'\1-oost', add_punct)          
     add_punct_north = re.sub(r'([a-z])\tnoord^-', r'\1-noord', add_punct_east)  #Same ^, but avoids hoorn-noord-holland
-    punct_north = re.sub(r'noord\t([a-z])', r'noord-\1', add_punct_north)       #Adds -, when necessary e.g. noord holland, becomes noord-holland
-    special_case = re.sub('aan\thet\tstrand', 'aan het strand', punct_north)    
+    punct_north = re.sub(r'noord\t([a-z])', r'noord-\1', add_punct_north)       #Adds -, e.g. noord holland, becomes noord-holland
+    punct_east = re.sub(r'oost\t([a-z])', r'oost-\1', punct_north)              #Adds -, e.g. Oost Gelderland, becomes Oost-Gelderland
+    special_case = re.sub('aan\thet\tstrand', 'aan het strand', punct_east)    
     special_cases = re.sub('loon\top\tzand', 'loon op zand', special_case)      
     spec_case = re.sub('nes\ta', 'nes a', special_cases)                        
     split_locations = spec_case.split('\t')
