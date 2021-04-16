@@ -10,11 +10,11 @@ zless /net/corpora/twitter2/Tweets/2015/12/201512*.out.gz | /net/corpora/twitter
 
 # Copy to local
 With openingen linux in the directory where the text files should be stored:
-For every month with variable snert, where s1234567 is the snumber:
-scp s1234567@karora.let.rug.nl:~/IWO_project/snert_2015_12.txt /mnt/c/Users/indyv/Documents/IWO_project
+For every month with variable snert, where s1234567 is the snumber and /mnt... is your local path:
+scp s1234567@karora.let.rug.nl:~/IWO_project/snert_2015_12.txt /mnt/c/Users/yourlocalname/Documents/IWO_project
 
 For every month with variable erwtensoep:
-scp s1234567@karora.let.rug.nl:~/IWO_project/erwtensoep_2015_12.txt /mnt/c/Users/indyv/Documents/IWO_project
+scp s1234567@karora.let.rug.nl:~/IWO_project/erwtensoep_2015_12.txt /mnt/c/Users/yourlocalname/Documents/IWO_project
 
 # Independent variables north and south
 Lists copied from Wikipedia and combined to make a list for all the places in the northern region. Combining them becomes north.txt
